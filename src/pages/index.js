@@ -18,6 +18,7 @@ import sample2 from '../assets/images/usage/sample2.png';
 import sample3 from '../assets/images/usage/sample3.png';
 import shirt1 from '../assets/images/usage/shirt1.png';
 import shirt2 from '../assets/images/usage/shirt2.png';
+import footBanner from '../assets/images/banner-foot.png';
 export default function Index() {
     return (
         <div className="App">
@@ -157,6 +158,12 @@ export default function Index() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            <section className='mt-5'>
+                <div className='container'>
+                    <img src={footBanner} className="img-fluid" />
                 </div>
             </section>
 

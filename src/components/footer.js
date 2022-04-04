@@ -1,4 +1,3 @@
-import footBanner from '../assets/images/banner-foot.png';
 // social
 import linkedIn from '../assets/images/social/linkedin.png';
 import twitter from '../assets/images/social/twitter.png';
@@ -6,11 +5,6 @@ import facebook from '../assets/images/social/facebook.png';
 
 function Footer() {
     return <>
-        <section className='mt-5'>
-            <div className='container'>
-                <img src={footBanner} className="img-fluid" />
-            </div>
-        </section>
         <footer className='bg-dark text-light' style={{ padding: '25px' }}>
             <div className='container'>
                 <div className='row align-items-center'>

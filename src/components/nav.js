@@ -30,7 +30,7 @@ function Nav(props) {
                         <a className="nav-link" style={{ fontWeight: '700', fontSize: '18px' }} href="/gallery">Gallery</a>
                     </li>
                     <li className="nav-item">
-                        <a className="nav-link" style={{ fontWeight: '700', fontSize: '18px' }} href="/">FAQs</a>
+                        <a className="nav-link" style={{ fontWeight: '700', fontSize: '18px' }} href="/faqs">FAQs</a>
                     </li>
                     <li className="nav-item">
                         <a className="nav-link" style={{ fontWeight: '700', fontSize: '18px' }} href="/addons">Addons</a>

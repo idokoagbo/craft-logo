@@ -5,7 +5,7 @@ function Nav(props) {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        window.location.href='/order-logo';
+        window.location.href = '/order-logo';
     }
 
     return <nav className="navbar navbar-light navbar-expand-lg bg-light navbar-expand-lg justifty-content-between fixed-top">
@@ -39,7 +39,7 @@ function Nav(props) {
                 </ul>
 
                 <form onClick={handleSubmit} class="form-inline my-2 my-lg-0 ms-auto">
-                    <button type="button" class="btn btn-dark btn-lg " style={{ borderRadius: 50 }} type="submit">Order your Logo &raquo;</button>
+                    <button type="submit" class="btn btn-dark btn-lg " style={{ borderRadius: 50 }}>Order your Logo &raquo;</button>
                 </form>
 
             </div>

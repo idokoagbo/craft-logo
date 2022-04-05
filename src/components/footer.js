@@ -15,10 +15,10 @@ function Footer() {
                     <div className='col-md'>
                         <div className='row'>
                             <div className='col-md mb-1'>
-                                <a href="" style={{ padding: '10px', textDecoration: 'none', color: "#fff", fontWeight: '700', fontSize: '18px', lineHeight: '20px' }}>Home</a>
+                                <a href="/" style={{ padding: '10px', textDecoration: 'none', color: "#fff", fontWeight: '700', fontSize: '18px', lineHeight: '20px' }}>Home</a>
                             </div>
                             <div className='col-md mb-1'>
-                                <a href="" style={{ padding: '10px', textDecoration: 'none', color: "#fff", fontWeight: '700', fontSize: '18px', lineHeight: '20px' }}>Gallery</a>
+                                <a href="/gallery" style={{ padding: '10px', textDecoration: 'none', color: "#fff", fontWeight: '700', fontSize: '18px', lineHeight: '20px' }}>Gallery</a>
                             </div>
                             <div className='col-md mb-1'>
                                 <a href="" style={{ padding: '10px', textDecoration: 'none', color: "#fff", fontWeight: '700', fontSize: '18px', lineHeight: '20px' }}>About</a>

@@ -12,7 +12,7 @@ function Addons() {
             <Nav logo={logo} />
         </header>
 
-        <section className='mt-5 mb-5' style={{height: '75vh'}}>
+        <section className='mt-5 mb-5' style={{minHeight: '75vh'}}>
             <div className='container'>
                 <br />
                 <div className='row justify-content-md-center'>

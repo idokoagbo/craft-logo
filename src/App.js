@@ -6,6 +6,7 @@ import Gallery from './pages/gallery';
 import Order from './pages/order';
 import Addons from './pages/addons';
 import Review from './pages/review';
+import Payment from './pages/payment';
 
 
 
@@ -17,6 +18,7 @@ function App() {
       <Route exact path='/order-logo' element={<Order />} />
       <Route exact path='/addons' element={<Addons />} />
       <Route exact path='/review-order' element={<Review />} />
+      <Route exact path='/payment' element={<Payment />} />
     </Routes>
   </Router>;
 }

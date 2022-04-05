@@ -48,10 +48,14 @@ function Gallery() {
                 <div className='container'>
                     <div className='row'>
                         {
-                            images.map((image) => {
+                            images.map((image, key) => {
                                 return <div className='col-md-6 mb-3'>
                                     <a href='#' onClick={() => selectDesign(image)}>
-                                        <img src={image} className="img-fluid" />
+                                        {
+                                            key % 2 === 0
+                                                ? <img src={image} className="img-fluid" style={{ float: 'right' }} />
+                                                : <img src={image} className="img-fluid" />
+                                        }
                                     </a>
                                 </div>
                             })

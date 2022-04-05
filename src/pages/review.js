@@ -3,11 +3,12 @@ import Footer from '../components/footer';
 import '../assets/style/App.css';
 import logo from '../assets/images/logo.svg';
 import frame1 from '../assets/images/frames/6.png';
-import sample1 from '../assets/images/usage/sample1.png';
-import sample2 from '../assets/images/usage/sample2.png';
 import CircularBtn from '../components/circularBtn';
 
 function Review() {
+
+    const logoOrder = JSON.parse(sessionStorage.getItem('logoOrder')) ?? null;
+
     return <div className='App'>
         <header className="App-header">
             <Nav logo={logo} />
@@ -25,19 +26,19 @@ function Review() {
                                     <img src={frame1} className="img-fluid" />
                                 </div>
                                 <div className='col-md-8'>
-                                    <p>Logo name <span style={{float: 'right'}}>Samson Adewole</span></p>
-                                    <p>Tagline <span style={{float: 'right'}}>Product Designer</span></p>
-                                    <p>Phone no. <span style={{float: 'right'}}>234 803 603 2215</span></p>
-                                    <p>Email <span style={{float: 'right'}}>samsonade50@gmail.com</span></p>
+                                    <p>Logo name <span style={{ float: 'right' }}>{logoOrder && logoOrder.logo}</span></p>
+                                    <p>Tagline <span style={{ float: 'right' }}>{logoOrder && logoOrder.tag}</span></p>
+                                    <p>Phone no. <span style={{ float: 'right' }}>{logoOrder && logoOrder.phone}</span></p>
+                                    <p>Email <span style={{ float: 'right' }}>{logoOrder && logoOrder.email}</span></p>
                                 </div>
                             </div>
                         </div>
                         <div className='mb-3' style={{ padding: '20px', borderRaius: '9px', boxShadow: "0px 0px 40px rgba(239, 240, 241, 0.7)" }}>
                             <div className='row align-items-center'>
                                 <div className='col-md-2'>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                        <label class="form-check-label" for="flexCheckDefault">
+                                    <div className="form-check">
+                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        <label className="form-check-label" for="flexCheckDefault">
                                         </label>
                                     </div>
                                 </div>
@@ -57,7 +58,7 @@ function Review() {
                             </div>
                         </div>
                         <p className='text-center' style={{ fontWeight: '700', fontSize: '15px', lineHeight: '46px', color: 'rgba(0, 0, 0, 0.5)' }}>This is optional, you can proceed to review the order</p>
-                        <CircularBtn text="Make payment" />
+                        <CircularBtn text="Make payment" link='/payment' />
                     </div>
                 </div>
             </div>

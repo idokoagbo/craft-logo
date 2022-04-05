@@ -7,6 +7,7 @@ import Order from './pages/order';
 import Addons from './pages/addons';
 import Review from './pages/review';
 import Payment from './pages/payment';
+import Faqs from './pages/faqs';
 
 
 
@@ -19,6 +20,7 @@ function App() {
       <Route exact path='/addons' element={<Addons />} />
       <Route exact path='/review-order' element={<Review />} />
       <Route exact path='/payment' element={<Payment />} />
+      <Route exact path='/faqs' element={<Faqs />} />
     </Routes>
   </Router>;
 }

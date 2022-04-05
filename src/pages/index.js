@@ -19,6 +19,7 @@ import sample3 from '../assets/images/usage/sample3.png';
 import shirt1 from '../assets/images/usage/shirt1.png';
 import shirt2 from '../assets/images/usage/shirt2.png';
 import footBanner from '../assets/images/banner-foot.png';
+import CircularBtn from '../components/circularBtn';
 export default function Index() {
     return (
         <div className="App">
@@ -66,7 +67,7 @@ export default function Index() {
                         </div>
                     </div>
 
-                    <center><a href='' style={{ padding: "13px", borderRadius: '100px' }} className='btn btn-lg btn-dark'><h3 style={{ fontWeight: '500', fontSize: '18px', lineHeight: '' }}>Order one now &raquo;</h3></a></center>
+                    <CircularBtn text='Order one now' link='/order-logo' />
                 </div>
 
             </section>
@@ -150,9 +151,7 @@ export default function Index() {
                                 </div>
                                 <div className='col-md-3'>
                                     <h1 style={{ fontWeight: '700', fontSize: '64px', lineHeight: '76.8px' }}>£50</h1>
-                                    <a href='' style={{ padding: "13px", borderRadius: '100px' }} className='btn btn-lg btn-dark'>
-                                        <h3 style={{ fontWeight: '500', fontSize: '18px', lineHeight: '' }}>View more designs &raquo;</h3>
-                                    </a>
+                                    <CircularBtn text='View more designs' link='/gallery' />
                                 </div>
 
                             </div>

@@ -25,7 +25,7 @@ function Designs() {
                 }
             </div>
 
-            <CircularBtn text='View more designs' />
+            <CircularBtn text='View more designs' link="/gallery" />
         </div>
     </section>
 }

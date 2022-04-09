@@ -10,7 +10,7 @@ import Footer from '../components/footer';
 import '../assets/style/App.css';
 
 // images
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo.png';
 import section1 from '../assets/images/section1.png';
 import signature from '../assets/images/usage/signature.png';
 import sample1 from '../assets/images/usage/sample1.png';

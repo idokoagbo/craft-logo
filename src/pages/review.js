@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 import '../assets/style/App.css';
@@ -7,7 +8,10 @@ import CircularBtn from '../components/circularBtn';
 
 function Review() {
 
+    const [price, setPrice] = useState(25);
+
     const logoOrder = JSON.parse(sessionStorage.getItem('logoOrder')) ?? null;
+
 
     return <div className='App'>
         <header className="App-header">
@@ -30,6 +34,8 @@ function Review() {
                                     <p>Tagline <span style={{ float: 'right' }}>{logoOrder && logoOrder.tag}</span></p>
                                     <p>Phone no. <span style={{ float: 'right' }}>{logoOrder && logoOrder.phone}</span></p>
                                     <p>Email <span style={{ float: 'right' }}>{logoOrder && logoOrder.email}</span></p>
+
+                                    <p><small style={{ float: 'right' }}><a href='order-logo?edit=true'>edit order</a></small></p>
                                 </div>
                             </div>
                         </div>
@@ -37,7 +43,13 @@ function Review() {
                             <div className='row align-items-center'>
                                 <div className='col-md-2'>
                                     <div className="form-check">
-                                        <input className="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                        <input className="form-check-input" type="checkbox" value="" onChange={(e) => {
+                                            if(e.target.checked){
+                                                setPrice(40)
+                                            }else{
+                                                setPrice(25)
+                                            }
+                                        }} id="flexCheckDefault" />
                                         <label className="form-check-label" for="flexCheckDefault">
                                         </label>
                                     </div>
@@ -53,11 +65,11 @@ function Review() {
                                     <h1 style={{ fontWeight: '700', fontSize: '36px', lineHeight: '41.4px' }}>Total</h1>
                                 </div>
                                 <div className='col-md-6'>
-                                    <span style={{ fontWeight: '700', fontSize: '36px', lineHeight: '41px', color: '#090808', float: 'right' }}>£25</span>
+                                    <span style={{ fontWeight: '700', fontSize: '36px', lineHeight: '41px', color: '#090808', float: 'right' }}>£{price}</span>
                                 </div>
                             </div>
                         </div>
-                        <p className='text-center' style={{ fontWeight: '700', fontSize: '15px', lineHeight: '46px', color: 'rgba(0, 0, 0, 0.5)' }}>This is optional, you can proceed to review the order</p>
+                        <br/>
                         <CircularBtn text="Make payment" link='/payment' />
                     </div>
                 </div>

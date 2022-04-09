@@ -38,8 +38,8 @@ function Nav(props) {
 
                 </ul>
 
-                <form onClick={handleSubmit} class="form-inline my-2 my-lg-0 ms-auto">
-                    <button type="submit" class="btn btn-dark btn-lg " style={{ borderRadius: 50 }}>Order your Logo &raquo;</button>
+                <form onClick={handleSubmit} className="form-inline my-2 my-lg-0 ms-auto">
+                    <button type="submit" className="btn btn-dark btn-lg " style={{ borderRadius: 50 }}>Order your Logo &raquo;</button>
                 </form>
 
             </div>

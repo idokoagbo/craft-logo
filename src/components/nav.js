@@ -15,8 +15,7 @@ function Nav(props) {
                 href="/"
                 rel="noopener noreferrer"
             >
-                <img src={props.logo} width={45} height={45} className="d-inline-block align-top" alt='brand-logo' />
-                <span style={{ fontSize: '24px', fontWeight: '700', lineHeight: '46px' }}>The Craft Logo</span>
+                <img src={props.logo} height={25} className="d-inline-block align-top" alt='brand-logo' />
             </a>
 
             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

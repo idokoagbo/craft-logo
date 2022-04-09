@@ -31,6 +31,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -39,10 +40,14 @@
 
 /* my style */
 
-.hero{
-  background: linear-gradient(90deg,#083FFF, #8AEDF6);
+.hero {
+  background: linear-gradient(90deg, #083FFF, #8AEDF6);
   min-height: fit-content;
   width: 100%;
   overflow: hidden;
   padding: 150px 0px;
+}
+
+.navbar-nav>li {
+  margin-right: 50px;
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
@@ -7,6 +7,11 @@ import '../assets/style/App.css';
 
 
 function Order() {
+    const [orderDetails, setOrderDetails] = useState();
+
+    useEffect(() => {
+        setOrderDetails(JSON.parse(sessionStorage.getItem('logoOrder')));
+    }, [])
 
     const [logo, setLogo] = useState();
     const [tag, setTag] = useState();
@@ -14,7 +19,6 @@ function Order() {
     const [email, setEmail] = useState();
     const [confirm, setConfirm] = useState();
     const [errorMessage, setErrorMessage] = useState();
-
     const [searchParams, setSearchParams] = useSearchParams();
 
     const handleSubmit = (event) => {
@@ -29,11 +33,10 @@ function Order() {
             }));
 
             document.location.href = '/addons';
-            
-        } 
-        setErrorMessage('Email confirmation incorrect');
 
-
+        } else {
+            setErrorMessage('Email confirmation incorrect');
+        }
     }
 
     return <div className='App'>
@@ -52,12 +55,24 @@ function Order() {
                             <form onSubmit={handleSubmit}>
 
                                 {errorMessage && <div className='alert alert-danger mb-3'><div className='container'>{errorMessage}</div></div>}
+                                {
+                                    searchParams.get("edit") && orderDetails ? <>
 
-                                <InputElement text="Logo name" value={searchParams.get("name")} todo={setLogo} />
-                                <InputElement text="Logo tagline" todo={setTag} />
-                                <InputElement text="Phone no." todo={setPhone} />
-                                <InputElement text="Email" todo={setEmail} />
-                                <InputElement text="Confirm email" todo={setConfirm} />
+                                        <InputElement text="Logo name" value={orderDetails.logo} todo={setLogo} />
+                                        <InputElement text="Logo tagline" todo={setTag} value={orderDetails.tag} />
+                                        <InputElement text="Phone no." todo={setPhone} value={orderDetails.phone} />
+                                        <InputElement text="Email" todo={setEmail} value={orderDetails.email} />
+                                        <InputElement text="Confirm email" todo={setConfirm} />
+
+                                    </> : <>
+                                        <InputElement text="Logo name" value={searchParams.get("name")} todo={setLogo} />
+                                        <InputElement text="Logo tagline" todo={setTag} />
+                                        <InputElement text="Phone no." todo={setPhone} />
+                                        <InputElement text="Email" todo={setEmail} />
+                                        <InputElement text="Confirm email" todo={setConfirm} />
+                                    </>
+                                }
+
                                 <center>
                                     <button style={{ padding: "13px", borderRadius: '100px' }} className="btn btn-lg btn-dark">Proceed &raquo;</button>
                                 </center>

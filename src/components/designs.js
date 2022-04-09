@@ -9,7 +9,7 @@ import frame5 from '../assets/images/frames/5.png';
 
 function Designs() {
 
-    const frames = [frame1, frame2, frame3, frame4, frame5];
+    const frames = [frame1, frame2, frame3, frame4, frame5, frame3];
 
     return <section className='mt-5'>
         <div className='container'>

@@ -4,7 +4,7 @@ import Modal from "react-bootstrap/Modal";
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 import '../assets/style/App.css';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo.png';
 
 // images
 

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 import '../assets/style/App.css';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo.png';
 import frame1 from '../assets/images/frames/6.png';
 import CircularBtn from '../components/circularBtn';
 

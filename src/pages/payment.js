@@ -6,7 +6,7 @@ import CheckoutForm from '../components/checkoutform';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 import '../assets/style/App.css';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo.png';
 
 const stripePromise = loadStripe('pk_test_nmFUiOyKuRx9dVllJJztDvZP00d6gSCafd');
 

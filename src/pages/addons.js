@@ -1,7 +1,7 @@
 import Nav from '../components/nav';
 import Footer from '../components/footer';
 import '../assets/style/App.css';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo.png';
 import sample1 from '../assets/images/usage/sample1.png';
 import sample2 from '../assets/images/usage/sample2.png';
 import CircularBtn from '../components/circularBtn';

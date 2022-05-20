@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import Modal from "react-bootstrap/Modal";
 
 import Nav from '../components/nav';
@@ -25,6 +26,7 @@ function Gallery() {
 
     const [show, setShow] = useState(false);
     const [currentDesign, setDesign] = useState(null);
+    const [searchParams, setSearchParams] = useSearchParams();
 
     const selectDesign = (value) => {
         setDesign(value);
@@ -80,7 +82,7 @@ function Gallery() {
                 </center>
             </Modal.Body>
             <Modal.Footer>
-                <a href='/order-logo' style={{ padding: "13px", borderRadius: '100px' }} className='btn btn-dark'>Order this design &raquo;</a>
+                <a href={'/order-logo?name=' + searchParams.get("name")} style={{ padding: "13px", borderRadius: '100px' }} className='btn btn-dark'>Order this design &raquo;</a>
             </Modal.Footer>
         </Modal>
     </>

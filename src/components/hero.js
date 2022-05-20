@@ -9,7 +9,7 @@ function Hero() {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        window.location.href = document.location.href + `order-logo?name=${logoName}`
+        window.location.href = document.location.href + `gallery?name=${logoName}`
     };
 
     return <div className="hero">

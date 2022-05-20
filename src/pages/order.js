@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import Nav from '../components/nav';
 import Footer from '../components/footer';
-import appLogo from '../assets/images/logo.svg';
+import appLogo from '../assets/images/logo.png';
+
 import '../assets/style/App.css';
 
 

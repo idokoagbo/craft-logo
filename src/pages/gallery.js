@@ -82,7 +82,7 @@ function Gallery() {
                 </center>
             </Modal.Body>
             <Modal.Footer>
-                <a href={'/order-logo?name=' + searchParams.get("name")} style={{ padding: "13px", borderRadius: '100px' }} className='btn btn-dark'>Order this design &raquo;</a>
+                <a href={searchParams.get("name") ? '/order-logo?name=' + searchParams.get("name") : '/order-logo'} style={{ padding: "13px", borderRadius: '100px' }} className='btn btn-dark'>Order this design &raquo;</a>
             </Modal.Footer>
         </Modal>
     </>
